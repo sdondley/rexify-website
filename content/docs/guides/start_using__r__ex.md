@@ -40,16 +40,16 @@ If you want to run administrative tasks on the remote machines, you obviously wo
 
 First we need to create a new directory to store your Rexfile in it, and change to that directory:
 
-    $ mkdir -p projects/my-first-rex-project
-    $ cd projects/my-first-rex-project
+    $ mkdir my-first-rex-project
+    $ cd my-first-rex-project
 
 Now change into this directory and create a file called Rexfile with the following contents:
 
     ```perl
     use Rex -feature => ['1.4'];
     
-    user 'my-ssh-user';
-    password 'my-ssh-password';
+    user 'my-user';
+    password 'my-password';
     
     group myservers => 'mywebserver', 'mymailserver', 'myfileserver';
     
